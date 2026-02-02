@@ -113,7 +113,7 @@ Data:
 {processed_df.to_csv(index=False)}
 """
         try:
-            model = genai.GenerativeModel("models/gemini-1.5-flash")
+            model = genai.GenerativeModel("models/gemini-2.5-pro")
             response = model.generate_content(prompt)
             st.markdown("### AI Suggestions")
             st.write(response.text)
