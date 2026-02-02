@@ -12,9 +12,9 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=GEMINI_API_KEY)
 
 # Page title and header
-st.set_page_config(page_title="AI Financial Advisor", layout="wide")
-st.title("💰 AI Financial Advisor")
-st.markdown("Upload your raw financial CSV data to get AI-generated insights and interactive visualizations.")
+st.set_page_config(page_title="Financial Simplified", layout="wide")
+st.title("Finance Simplified")
+st.markdown("Upload your raw financial CSV data to get AI insights and interactive visualizations.")
 st.divider()
 
 # Sidebar for controls
@@ -39,7 +39,7 @@ if uploaded_file:
 
     # ---------------- Tab 2: Processed Data ----------------
     with tab2:
-        with st.expander("Show Processed / Cleaned Data"):
+        with st.expander("Show Cleaned Data"):
             st.dataframe(processed_df)
         st.caption(f"Columns detected: {', '.join(processed_df.columns)}")
 
@@ -93,7 +93,7 @@ if uploaded_file:
 
     # ---------------- Tab 4: AI Insights ----------------
     with tab4:
-        st.subheader("🤖 Gemini AI Analysis")
+        st.subheader("AI Analysis")
         prompt = f"""
 You are a financial data analyst AI. Analyze the following dataset provided in CSV format.
 Your analysis should include:
